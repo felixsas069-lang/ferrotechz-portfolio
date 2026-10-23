@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="FERROTECHZ | Felix Nyabuti Nyamoi — portfolio for web development, data, spreadsheets, and digital projects.">
+  <meta property="og:title" content="FERROTECHZ | Felix Nyabuti Nyamoi">
+  <meta property="og:description" content="Web projects, data support, and practical digital solutions.">
+  <meta property="og:type" content="website">
+  <title>FERROTECHZ | Felix Nyabuti Nyamoi</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080d19;--panel:#10182a;--panel2:#121e33;--text:#edf3ff;--muted:#9cacc5;--line:#253653;--teal:#43e0ca;--blue:#7c8cff;--glow:rgba(67,224,202,.14);--radius:20px;--max:1120px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:radial-gradient(ellipse at 75% 0%,rgba(83,87,180,.18),transparent 36%),radial-gradient(ellipse at 10% 25%,rgba(27,190,174,.09),transparent 32%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .skip{position:absolute;left:-999px;top:8px;background:var(--teal);color:#061018;padding:8px 12px;border-radius:8px;z-index:99}.skip:focus{left:8px}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,13,25,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(91,116,155,.18)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:.04em}.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--teal),var(--blue));color:#07111d;font-weight:950;font-size:22px;box-shadow:0 8px 30px var(--glow)}
+    .brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:.18em;font-weight:700;margin-top:-4px}
+    nav{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:14px}
+    nav a:hover,nav a:focus-visible{color:var(--teal)}
+    .menu{display:none;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:9px 12px;border-radius:10px}
+    .hero{padding:94px 0 76px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:56px;min-height:570px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(67,224,202,.28);background:rgba(67,224,202,.07);color:var(--teal);padding:7px 12px;border-radius:99px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 14px var(--teal)}
+    h1{font-size:clamp(42px,6.3vw,76px);line-height:1.03;letter-spacing:-.055em;margin:22px 0}
+    .gradient{background:linear-gradient(100deg,var(--teal),#93b6ff 68%,#b2a3ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{max-width:650px;color:var(--muted);font-size:18px;line-height:1.8}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:12px;font-weight:800;border:1px solid var(--line);transition:transform .2s,border-color .2s;background:var(--panel);cursor:pointer}
+    .btn:hover{transform:translateY(-2px);border-color:var(--teal)}
+    .primary{background:linear-gradient(110deg,var(--teal),#9ab1ff);color:#07111d;border:0}
+    .hero-card{position:relative;padding:26px;border-radius:28px;background:linear-gradient(145deg,rgba(21,35,58,.95),rgba(12,20,36,.92));border:1px solid #2b3d5d;box-shadow:0 28px 90px rgba(0,0,0,.25);overflow:hidden}
+    .hero-card:before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;right:-95px;top:-95px;background:var(--glow);filter:blur(10px)}
+    .monogram{width:94px;height:94px;display:grid;place-items:center;border-radius:27px;background:linear-gradient(140deg,var(--teal),var(--blue));color:#06111c;font-size:42px;font-weight:950;margin-bottom:24px}
+    .hero-card h2{margin:0;font-size:24px}.hero-card p{color:var(--muted);margin:5px 0 24px}
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .mini{padding:13px;border:1px solid var(--line);border-radius:13px;background:rgba(4,10,20,.25)}.mini b{display:block;font-size:14px}.mini span{font-size:12px;color:var(--muted)}
+    section{padding:74px 0}
+    .section-head{max-width:700px;margin-bottom:30px}.kicker{color:var(--teal);font-weight:850;text-transform:uppercase;font-size:12px;letter-spacing:.16em}
+    h2.section-title{font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-.035em;margin:10px 0 12px}
+    .section-head p,.muted{color:var(--muted)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(16,24,42,.95),rgba(12,19,33,.92));border-radius:var(--radius);padding:23px;transition:transform .2s,border-color .2s}
+    .card:hover{transform:translateY(-4px);border-color:#3d6580}
+    .card-icon{width:44px;height:44px;border-radius:13px;background:rgba(67,224,202,.09);border:1px solid rgba(67,224,202,.2);display:grid;place-items:center;color:var(--teal);font-size:22px;margin-bottom:18px}
+    .card h3{margin:0 0 9px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}.tag{font-size:11px;border:1px solid var(--line);border-radius:99px;padding:5px 9px;color:#c4d2e7}
+    .project-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.project-mark{font-size:12px;letter-spacing:.1em;color:var(--teal);font-weight:900}.status{font-size:10px;border-radius:99px;background:rgba(124,140,255,.12);color:#b7c1ff;padding:5px 8px;white-space:nowrap}
+    .project-link{display:inline-flex;align-items:center;gap:8px;color:var(--teal);font-weight:800;font-size:13px;margin-top:18px}
+    .skill-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px}
+    .skill-panel{border:1px solid var(--line);border-radius:var(--radius);padding:25px;background:var(--panel)}
+    .skill-list{display:flex;flex-wrap:wrap;gap:9px}.skill-pill{border-radius:10px;border:1px solid #2c405f;background:#0c1424;padding:9px 12px;color:#d8e4f7;font-size:13px}
+    .note{border-left:3px solid var(--teal);padding:4px 0 4px 15px;color:var(--muted);font-size:13px;margin-top:18px}
+    .contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px}
+    .contact-method{display:flex;gap:13px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}.contact-method:last-child{border-bottom:0}.contact-method .card-icon{margin:0;flex:0 0 44px}.contact-method small{display:block;color:var(--muted)}
+    form{display:grid;gap:14px}.field{display:grid;gap:7px}.field label{font-size:13px;color:#c8d5e8;font-weight:700}.field input,.field textarea{width:100%;background:#080f1d;border:1px solid #2a3c58;border-radius:11px;padding:12px;color:var(--text);outline:none}.field input:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(67,224,202,.08)}textarea{min-height:130px;resize:vertical}
+    .form-hint{font-size:12px;color:var(--muted);margin:0}
+    footer{border-top:1px solid rgba(91,116,155,.18);padding:27px 0;color:var(--muted);font-size:13px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .backtop{color:var(--teal)}
+    .toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#17243a;border:1px solid #395475;padding:12px 16px;border-radius:12px;box-shadow:0 15px 45px #0008;z-index:50;max-width:calc(100% - 30px);display:none}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:35px;padding-top:65px;min-height:unset}.hero-card{max-width:560px}.cards{grid-template-columns:repeat(2,1fr)}.skill-layout,.contact-layout{grid-template-columns:1fr}}
+    @media(max-width:620px){.wrap{width:min(100% - 28px,var(--max))}.nav{height:68px}.menu{display:block}nav{display:none;position:absolute;left:0;right:0;top:68px;background:#0b1221;border-bottom:1px solid var(--line);padding:15px 22px 20px;flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:11px 0}.hero{padding:52px 0 38px}h1{font-size:clamp(42px,13vw,60px)}.lead{font-size:16px}.cards{grid-template-columns:1fr}section{padding:55px 0}.hero-card{padding:21px}.mini-grid{grid-template-columns:1fr 1fr}.actions .btn{flex:1}.section-head{margin-bottom:23px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="FERROTECHZ home"><span class="logo">F</span><span>FERROTECHZ<small>FELIX NYABUTI</small></span></a>
+      <button class="menu" id="menuBtn" aria-expanded="false" aria-controls="navLinks">Menu ☰</button>
+      <nav id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> Digital projects · Data · Web</div>
+        <h1>Ideas into<br><span class="gradient">working solutions.</span></h1>
+        <p class="lead">I'm <strong>Felix Nyabuti Nyamoi</strong> — a technology-focused student and builder exploring web development, data analysis, and practical digital tools. I create projects, learn by building, and help make digital work clearer and more useful.</p>
+        <div class="actions"><a class="btn primary" href="#projects">Explore my projects ↗</a><a class="btn" href="#contact">Contact me</a></div>
+      </div>
+      <aside class="hero-card" aria-label="Professional summary">
+        <div class="monogram">FN</div>
+        <h2>Felix Nyabuti Nyamoi</h2>
+        <p>FERROTECHZ · Portfolio & digital services</p>
+        <div class="mini-grid">
+          <div class="mini"><b>Web</b><span>HTML · CSS · JavaScript</span></div>
+          <div class="mini"><b>Data</b><span>Excel · SPSS · Stata</span></div>
+          <div class="mini"><b>Build</b><span>Practical prototypes</span></div>
+          <div class="mini"><b>Focus</b><span>Learn, improve, deliver</span></div>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">About me</div><h2 class="section-title">Curious by nature.<br><span class="gradient">Practical by design.</span></h2><p>I work on hands-on digital projects while developing my skills in computing and statistics. I value clear communication, useful tools, and honest work. This portfolio presents selected projects and the services I can offer; it does not claim employment history or client results that I haven't verified.</p></div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">What I can help with</div><h2 class="section-title">Digital support that gets to the point.</h2><p>Small, clearly scoped tasks are welcome. Share what you need and I'll confirm whether it's a good fit before agreeing on a price or deadline.</p></div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">▦</div><h3>Spreadsheets & data entry</h3><p>Organize records, clean spreadsheet layouts, format tables, check entries, and create basic charts or summaries.</p><div class="tags"><span class="tag">Excel</span><span class="tag">Data cleaning</span><span class="tag">Charts</span></div></article>
+          <article class="card"><div class="card-icon">⌘</div><h3>Statistical support</h3><p>Help prepare datasets, explore descriptive statistics, and organize analysis outputs using tools I know.</p><div class="tags"><span class="tag">SPSS</span><span class="tag">Stata</span><span class="tag">Reporting</span></div></article>
+          <article class="card"><div class="card-icon">▤</div><h3>Document formatting</h3><p>Improve document structure, headings, tables, and presentation; assist with editable Word documents and reports.</p><div class="tags"><span class="tag">Word</span><span class="tag">Formatting</span><span class="tag">Reports</span></div></article>
+          <article class="card"><div class="card-icon">〈/〉</div><h3>Simple websites</h3><p>Create responsive, lightweight web pages using standard front-end technologies and clear layouts.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></article>
+          <article class="card"><div class="card-icon">✦</div><h3>Digital prototypes</h3><p>Build and refine small ideas into usable prototypes, with an emphasis on straightforward interfaces and practical features.</p><div class="tags"><span class="tag">UI</span><span class="tag">Prototyping</span></div></article>
+          <article class="card"><div class="card-icon">↗</div><h3>Need something specific?</h3><p>Send a short description of your task. I'll respond honestly about the scope, timing, and whether I can take it on.</p><div class="tags"><span class="tag">Remote</span><span class="tag">Kenya</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Selected projects</div><h2 class="section-title">Building the FERRO ecosystem.</h2><p>These are personal and learning projects. Their status may change as development continues; ask if you'd like to see a current demo or code sample.</p></div>
+        <div class="cards">
+          <article class="card"><div class="project-top"><span class="project-mark">FERRO / 01</span><span class="status">In development</span></div><h3>Ferro HUB</h3><p>An academic workspace concept for organizing university units, notes, tasks, and study workflows.</p><div class="tags"><span class="tag">HTML/CSS/JS</span><span class="tag">Product concept</span></div></article>
+          <article class="card"><div class="project-top"><span class="project-mark">FERRO / 02</span><span class="status">Prototype</span></div><h3>FERROTECHZ AI</h3><p>A conversation-analysis app concept with a dark interface, local demo analysis, reply suggestions, and history/privacy ideas.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">UI prototype</span></div></article>
+          <article class="card"><div class="project-top"><span class="project-mark">FERRO / 03</span><span class="status">Project work</span></div><h3>Ferro Notez</h3><p>A note-taking concept focused on useful document workflows and exporting notes, including options for drawings and backgrounds.</p><div class="tags"><span class="tag">App concept</span><span class="tag">Documents</span></div></article>
+          <article class="card"><div class="project-top"><span class="project-mark">FERRO / 04</span><span class="status">Learning project</span></div><h3>Statistical Computing</h3><p>Coursework practice with spreadsheet summaries, correlations, regression, and interpreting results from a sample retail dataset.</p><div class="tags"><span class="tag">Excel</span><span class="tag">Statistics</span></div></article>
+          <article class="card"><div class="project-top"><span class="project-mark">FERRO / 05</span><span class="status">Prototype</span></div><h3>Ferro Recipe</h3><p>A recipe-app project exploring a branded mobile experience. Ask for the repository or demo link when available.</p><div class="tags"><span class="tag">App development</span><span class="tag">Product design</span></div></article>
+          <article class="card"><div class="project-top"><span class="project-mark">FERRO / 06</span><span class="status">Ongoing practice</span></div><h3>Web experiments</h3><p>Small browser-based experiments and interface prototypes built to practice responsive layouts and interactive JavaScript.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Tools & learning</div><h2 class="section-title">A practical, growing toolkit.</h2><p>Skills listed here reflect tools and areas you've worked with or studied. Specific tasks should be agreed based on their requirements.</p></div>
+        <div class="skill-layout">
+          <div class="skill-panel"><h3>Web & software</h3><div class="skill-list"><span class="skill-pill">HTML5</span><span class="skill-pill">CSS</span><span class="skill-pill">JavaScript</span><span class="skill-pill">C++ fundamentals</span><span class="skill-pill">Responsive UI</span><span class="skill-pill">VS Code</span></div><p class="note">Focus: practical front-end projects, prototyping, and continued development.</p></div>
+          <div class="skill-panel"><h3>Data & productivity</h3><div class="skill-list"><span class="skill-pill">Microsoft Excel</span><span class="skill-pill">SPSS</span><span class="skill-pill">Stata</span><span class="skill-pill">Data entry</span><span class="skill-pill">Data cleaning</span><span class="skill-pill">Descriptive statistics</span><span class="skill-pill">Document formatting</span></div><p class="note">Focus: organizing data, basic analysis workflows, charts, and readable reports.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Contact</div><h2 class="section-title">Have a task or an idea?</h2><p>Tell me what you need, what format you want, and your deadline. Replace the placeholder contact details below before publishing this site.</p></div>
+        <div class="contact-layout">
+          <div class="card">
+            <h3>Let's connect</h3><p class="muted">For project inquiries, freelance tasks, or collaboration, use the contact details you add here.</p>
+            <div class="contact-method"><div class="card-icon">✉</div><div><b>Email</b><small id="emailDisplay">YOUR_EMAIL@example.com</small></div></div>
+            <div class="contact-method"><div class="card-icon">☏</div><div><b>WhatsApp</b><small id="phoneDisplay">YOUR_WHATSAPP_NUMBER</small></div></div>
+            <p class="form-hint">Contact placeholders are intentionally inactive until you replace them with your details.</p>
+          </div>
+          <div class="card">
+            <h3>Send a project inquiry</h3>
+            <form id="contactForm">
+              <div class="field"><label for="senderName">Your name</label><input id="senderName" name="name" autocomplete="name" required placeholder="Your name"></div>
+              <div class="field"><label for="senderEmail">Your email</label><input id="senderEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+              <div class="field"><label for="subject">What do you need?</label><input id="subject" name="subject" required placeholder="e.g. Spreadsheet cleanup"></div>
+              <div class="field"><label for="message">Project details</label><textarea id="message" name="message" required placeholder="Describe the task, deadline, and preferred format..."></textarea></div>
+              <button class="btn primary" type="submit">Prepare email inquiry ↗</button>
+              <p class="form-hint" id="formHint">This form opens your email app; it does not send data to a server or store submissions.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> FERROTECHZ | Felix Nyabuti Nyamoi</span><span>Built with HTML, CSS & JavaScript · <a class="backtop" href="#home">Back to top ↑</a></span></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    // SET THESE TWO VALUES BEFORE PUBLISHING. Use a full international WhatsApp number with digits only.
+    const CONTACT_EMAIL = "YOUR_EMAIL@example.com";
+    const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    menuBtn.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(open));
+      menuBtn.textContent = open ? "Close ✕" : "Menu ☰";
+    });
+    navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.textContent = "Menu ☰";
+    }));
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const emailReady = CONTACT_EMAIL && !CONTACT_EMAIL.includes("YOUR_EMAIL") && CONTACT_EMAIL.includes("@");
+    const phoneReady = WHATSAPP_NUMBER && !WHATSAPP_NUMBER.includes("YOUR_WHATSAPP") && /^\d{8,15}$/.test(WHATSAPP_NUMBER);
+    if (emailReady) {
+      document.getElementById("emailDisplay").textContent = CONTACT_EMAIL;
+      document.getElementById("emailDisplay").innerHTML = '<a href="mailto:' + CONTACT_EMAIL.replace(/"/g, "") + '">' + CONTACT_EMAIL.replace(/[&<>"]/g, "") + '</a>';
+    }
+    if (phoneReady) {
+      document.getElementById("phoneDisplay").textContent = "+" + WHATSAPP_NUMBER;
+      document.getElementById("phoneDisplay").innerHTML = '<a target="_blank" rel="noopener noreferrer" href="https://wa.me/' + WHATSAPP_NUMBER + '">Chat on WhatsApp · +' + WHATSAPP_NUMBER + '</a>';
+    }
+    const toast = document.getElementById("toast");
+    function showToast(message) { toast.textContent = message; toast.style.display = "block"; window.setTimeout(() => toast.style.display = "none", 4200); }
+    document.getElementById("contactForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const subject = encodeURIComponent("Portfolio inquiry: " + form.get("subject"));
+      const body = encodeURIComponent("Name: " + form.get("name") + "\nReply email: " + form.get("email") + "\n\nProject details:\n" + form.get("message"));
+      if (emailReady) {
+        window.location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + subject + "&body=" + body;
+      } else {
+        const text = "Name: " + form.get("name") + "\nEmail: " + form.get("email") + "\nSubject: " + form.get("subject") + "\n\n" + form.get("message");
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(() => showToast("Inquiry copied. Add your email in index.html, then submit again."), () => showToast("Add your email in index.html to enable email inquiries."));
+        } else {
+          showToast("Add your email in index.html to enable email inquiries.");
+        }
+      }
+    });
+  </script>
+</body>
+</html>
